@@ -3,9 +3,12 @@
   "version": 2,
   "projects": {
     "api": "apps/api",
-    "api-interfaces": "libs/api-interfaces",
+    "api-response": "libs/api/response",
+    "auth": "libs/auth",
+    "shared": "libs/shared",
+    "test": "libs/test",
+    "user": "libs/user",
     "web": "apps/web",
-    "web-e2e": "apps/web-e2e",
-    "test": "libs/test"
+    "web-e2e": "apps/web-e2e"
   }
 }

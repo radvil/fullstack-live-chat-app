@@ -1,12 +1,14 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { AuthModule } from '@radvil/api/auth';
+import { ApiResponseModule } from '@radvil/api/response';
+import { UserModule } from '@radvil/api/user';
 import {
   envFilePath,
   getDatabaseConfigModuleFactory,
   globalConfigValidationSchema,
 } from './app.config';
-
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 
@@ -24,6 +26,11 @@ import { AppService } from './app.service';
       inject: [ConfigService],
       useFactory: getDatabaseConfigModuleFactory,
     }),
+
+    ApiResponseModule,
+
+    AuthModule,
+    UserModule,
   ],
 })
 export class AppModule {}

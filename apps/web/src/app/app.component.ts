@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { TestService } from '@radvil/test';
+import { TestService } from '@radvil/api/test';
 
 @Component({
-  selector: 'rad-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
+  selector: 'web-root',
+  templateUrl: 'app.component.html',
+  styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
   constructor(private testApi: TestService) {

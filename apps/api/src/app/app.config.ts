@@ -17,6 +17,7 @@ export const globalConfigValidationSchema = joi.object({
 export const getDatabaseConfigModuleFactory = (config: ConfigService) => (<TypeOrmModuleOptions>{
   type: 'postgres',
   autoLoadEntities: true,
+  synchronize: true, // todo: remove/ toggle on on prod
   host: config.get('POSTGRES_HOST'),
   port: config.get('POSTGRES_PORT'),
   database: config.get('POSTGRES_DB'),
