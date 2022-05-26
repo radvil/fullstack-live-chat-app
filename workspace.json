@@ -5,6 +5,8 @@
     "api": "apps/api",
     "api-interfaces": "libs/api-interfaces",
     "instangular": "apps/instangular",
-    "instangular-e2e": "apps/instangular-e2e"
+    "instangular-e2e": "apps/instangular-e2e",
+    "live-chat": "apps/live-chat",
+    "live-chat-e2e": "apps/live-chat-e2e"
   }
 }

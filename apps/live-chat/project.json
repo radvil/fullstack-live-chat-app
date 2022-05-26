@@ -1,23 +1,27 @@
 {
   "projectType": "application",
-  "sourceRoot": "apps/instangular/src",
+  "sourceRoot": "apps/live-chat/src",
   "prefix": "radvil",
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
-        "outputPath": "dist/apps/instangular",
-        "index": "apps/instangular/src/index.html",
-        "main": "apps/instangular/src/main.ts",
-        "polyfills": "apps/instangular/src/polyfills.ts",
-        "tsConfig": "apps/instangular/tsconfig.app.json",
+        "outputPath": "dist/apps/live-chat",
+        "index": "apps/live-chat/src/index.html",
+        "main": "apps/live-chat/src/main.ts",
+        "polyfills": "apps/live-chat/src/polyfills.ts",
+        "tsConfig": "apps/live-chat/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
         "assets": [
-          "apps/instangular/src/favicon.ico",
-          "apps/instangular/src/assets"
+          "apps/live-chat/src/favicon.ico",
+          "apps/live-chat/src/assets"
         ],
-        "styles": ["apps/instangular/src/styles.scss"],
+        "styles": [
+          "apps/live-chat/src/styles.scss"
+        ],
         "scripts": []
       },
       "configurations": {
@@ -36,8 +40,8 @@
           ],
           "fileReplacements": [
             {
-              "replace": "apps/instangular/src/environments/environment.ts",
-              "with": "apps/instangular/src/environments/environment.prod.ts"
+              "replace": "apps/live-chat/src/environments/environment.ts",
+              "with": "apps/live-chat/src/environments/environment.prod.ts"
             }
           ],
           "outputHashing": "all"
@@ -57,38 +61,37 @@
       "executor": "@angular-devkit/build-angular:dev-server",
       "configurations": {
         "production": {
-          "browserTarget": "instangular:build:production"
+          "browserTarget": "live-chat:build:production"
         },
         "development": {
-          "browserTarget": "instangular:build:development"
+          "proxyConfig": "apps/live-chat/proxy.conf.json",
+          "browserTarget": "live-chat:build:development"
         }
       },
-      "defaultConfiguration": "development",
-      "options": {
-        "browserTarget": "instangular:build",
-        "proxyConfig": "apps/instangular/proxy.conf.json"
-      }
+      "defaultConfiguration": "development"
     },
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
       "options": {
-        "browserTarget": "instangular:build"
+        "browserTarget": "live-chat:build"
       }
     },
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "options": {
         "lintFilePatterns": [
-          "apps/instangular/**/*.ts",
-          "apps/instangular/**/*.html"
+          "apps/live-chat/**/*.ts",
+          "apps/live-chat/**/*.html"
         ]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/apps/instangular"],
+      "outputs": [
+        "coverage/apps/live-chat"
+      ],
       "options": {
-        "jestConfig": "apps/instangular/jest.config.ts",
+        "jestConfig": "apps/live-chat/jest.config.ts",
         "passWithNoTests": true
       }
     }
