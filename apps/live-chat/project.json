@@ -1,7 +1,7 @@
 {
   "projectType": "application",
   "sourceRoot": "apps/live-chat/src",
-  "prefix": "radvil",
+  "prefix": "rad",
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
@@ -64,8 +64,8 @@
           "browserTarget": "live-chat:build:production"
         },
         "development": {
-          "proxyConfig": "apps/live-chat/proxy.conf.json",
-          "browserTarget": "live-chat:build:development"
+          "browserTarget": "live-chat:build:development",
+          "proxyConfig": "apps/live-chat/proxy.conf.json"
         }
       },
       "defaultConfiguration": "development"

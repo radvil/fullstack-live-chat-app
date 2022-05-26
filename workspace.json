@@ -7,6 +7,7 @@
     "instangular": "apps/instangular",
     "instangular-e2e": "apps/instangular-e2e",
     "live-chat": "apps/live-chat",
-    "live-chat-e2e": "apps/live-chat-e2e"
+    "live-chat-e2e": "apps/live-chat-e2e",
+    "test": "libs/test"
   }
 }

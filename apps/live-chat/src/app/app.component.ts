@@ -1,10 +1,13 @@
 import { Component } from '@angular/core';
+import { TestService } from '@radvil/test';
 
 @Component({
-  selector: 'radvil-root',
+  selector: 'rad-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'live-chat';
+  constructor(private testApi: TestService) {
+    this.testApi.getHello().subscribe(console.log);
+  }
 }
