@@ -4,10 +4,8 @@
   "projects": {
     "api": "apps/api",
     "api-interfaces": "libs/api-interfaces",
-    "instangular": "apps/instangular",
-    "instangular-e2e": "apps/instangular-e2e",
-    "live-chat": "apps/live-chat",
-    "live-chat-e2e": "apps/live-chat-e2e",
+    "web": "apps/web",
+    "web-e2e": "apps/web-e2e",
     "test": "libs/test"
   }
 }
