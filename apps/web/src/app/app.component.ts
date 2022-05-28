@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { TestService } from '@radvil/api/test';
+import { TestService } from '@radvil/test';
+import { FindOptionsOrderValue } from 'typeorm';
 
 @Component({
   selector: 'web-root',
@@ -8,6 +9,14 @@ import { TestService } from '@radvil/api/test';
 })
 export class AppComponent {
   constructor(private testApi: TestService) {
-    this.testApi.getHello().subscribe(console.log);
+    this.testApi
+      .getUsers({
+        limit: 10,
+        offset: 0,
+        order: {
+          username: <FindOptionsOrderValue>'asc',
+        },
+      })
+      .subscribe(console.log);
   }
 }

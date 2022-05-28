@@ -3,11 +3,11 @@
   "version": 2,
   "projects": {
     "api": "apps/api",
+    "api-auth": "libs/api/auth",
     "api-response": "libs/api/response",
-    "auth": "libs/auth",
+    "api-user": "libs/api/user",
     "shared": "libs/shared",
     "test": "libs/test",
-    "user": "libs/user",
     "web": "apps/web",
     "web-e2e": "apps/web-e2e"
   }
