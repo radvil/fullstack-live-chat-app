@@ -1,5 +1,4 @@
 import { hash as bcryptHash } from 'bcrypt';
-import { Exclude, Expose } from 'class-transformer';
 import {
   BeforeInsert,
   BeforeUpdate,
@@ -27,12 +26,6 @@ export class UserEntity implements IUser {
   @Column({ nullable: true })
   lastName!: string;
 
-  @Expose()
-  get fullName(): string {
-    return `${this.firstName} ${this.lastName}`;
-  }
-
-  @Exclude()
   @Column({ select: false })
   password!: string;
 

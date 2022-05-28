@@ -2,6 +2,7 @@ import { Body, Controller, Post } from '@nestjs/common';
 import { ApiResMessage } from '@radvil/api/response';
 import { DtoCreateUser, IUser, UserService } from '@radvil/api/user';
 import { ApiDataAuth } from '@radvil/shared';
+import { DtoLogin } from '../model';
 
 import { AuthService } from '../service';
 
@@ -11,8 +12,8 @@ export class AuthController {
 
   @Post(ApiDataAuth.ApiPath.Login)
   @ApiResMessage('User logged in successfully')
-  login() {
-    return this.authService.authenticateUser();
+  login(@Body() dto: DtoLogin) {
+    return this.authService.authenticateUser(dto);
   }
 
   @Post(ApiDataAuth.ApiPath.Registration)

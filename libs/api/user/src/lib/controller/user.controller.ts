@@ -1,18 +1,21 @@
 import { Controller, Get, Param, Query } from '@nestjs/common';
-import { ApiDataUser, DtoGetMany } from '@radvil/shared';
+import { ApiDataUser } from '@radvil/shared';
 import { UserService } from '../service';
 
-@Controller('users')
+const featureName = 'users';
+
+@Controller(featureName)
 export class UserController {
   constructor(private userService: UserService) {}
 
   @Get()
-  async findAll(@Query() { offset, limit, order }: DtoGetMany) {
-    return await this.userService.getMany({ order, limit, offset });
+  findAll(@Query('limit') limit = 10, @Query('page') page = 0) {
+    limit = limit > 100 ? 100 : limit;
+    return this.userService.getMany({ limit, page, route: `/${featureName}` });
   }
 
   @Get(ApiDataUser.ApiParams.UserId)
   findById(@Param() userId: string) {
-    return this.userService.findOne({ id: userId });
+    return this.userService.findOne({ where: { id: userId } });
   }
 }

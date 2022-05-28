@@ -3,7 +3,6 @@ export interface IUser {
   username: string;
   email: string;
   firstName: string;
-  lastName: string;
   password?: string;
   createdTimestamp: string;
   updatedTimestamp?:string;
