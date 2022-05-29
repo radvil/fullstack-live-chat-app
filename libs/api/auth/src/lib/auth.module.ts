@@ -5,10 +5,11 @@ import { Constants } from '@radvil/shared/data-access';
 
 import { AuthJwtGuard } from './guard';
 import { AuthService } from './service';
+import { AuthJwtStrategy } from './strategy';
 
 @Module({
-  providers: [AuthService, AuthJwtGuard],
-  exports: [AuthService, AuthJwtGuard],
+  providers: [AuthService, AuthJwtStrategy, AuthJwtGuard],
+  exports: [AuthService],
   imports: [
     JwtModule.registerAsync({
       imports: [ConfigModule],

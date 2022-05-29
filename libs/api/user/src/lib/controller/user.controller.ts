@@ -1,4 +1,5 @@
-import { Body, Controller, Get, Param, Post, Query } from '@nestjs/common';
+import { Body, Controller, Get, Param, Post, Query, UseGuards } from '@nestjs/common';
+import { AuthJwtGuard } from '@radvil/api/auth';
 import { ApiResMessage } from '@radvil/api/response';
 import { DtoAuthenticateUser, DtoCreateUser, UserEntity } from '@radvil/shared/data-access';
 import { UserService } from '../service';
@@ -7,6 +8,7 @@ import { UserService } from '../service';
 export class UserController {
   constructor(private userService: UserService) {}
 
+  @UseGuards(AuthJwtGuard)
   @Get('')
   findAll(@Query('limit') limit = 10, @Query('page') page = 0) {
     limit = limit > 100 ? 100 : limit;
