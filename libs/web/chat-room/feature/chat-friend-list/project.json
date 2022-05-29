@@ -1,0 +1,25 @@
+{
+  "projectType": "library",
+  "sourceRoot": "libs/web/chat-room/feature/chat-friend-list/src",
+  "prefix": "web",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/web/chat-room/feature/chat-friend-list"],
+      "options": {
+        "jestConfig": "libs/web/chat-room/feature/chat-friend-list/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/web/chat-room/feature/chat-friend-list/**/*.ts",
+          "libs/web/chat-room/feature/chat-friend-list/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": ["scope:web", "type:web-feature"]
+}

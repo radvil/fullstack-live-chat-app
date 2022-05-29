@@ -1,0 +1,24 @@
+{
+  "projectType": "library",
+  "sourceRoot": "libs/web/web-config/src",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/web/web-config"],
+      "options": {
+        "jestConfig": "libs/web/web-config/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/web/web-config/**/*.ts",
+          "libs/web/web-config/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": ["scope:web", "type:data-access"]
+}

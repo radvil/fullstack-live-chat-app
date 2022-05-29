@@ -1,0 +1,25 @@
+{
+  "projectType": "library",
+  "sourceRoot": "libs/web/chat-room/feature/chat-message/src",
+  "prefix": "web",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/web/chat-room/feature/chat-message"],
+      "options": {
+        "jestConfig": "libs/web/chat-room/feature/chat-message/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/web/chat-room/feature/chat-message/**/*.ts",
+          "libs/web/chat-room/feature/chat-message/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": ["scope:web", "type:web-feature"]
+}

@@ -1,0 +1,25 @@
+{
+  "projectType": "library",
+  "sourceRoot": "libs/web/layout/auth/src",
+  "prefix": "web",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/web/layout/auth"],
+      "options": {
+        "jestConfig": "libs/web/layout/auth/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/web/layout/auth/**/*.ts",
+          "libs/web/layout/auth/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": ["scope:web", "type:web-feature"]
+}
