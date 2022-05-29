@@ -24,10 +24,8 @@
       "@radvil/web/chat-room": ["libs/web/chat-room/src/index.ts"],
       "@radvil/web/config": ["libs/web/config/src/index.ts"],
       "@radvil/web/core": ["libs/web/core/src/index.ts"],
-      "@radvil/web/layout/container": [
-        "libs/web/layout/container/src/index.ts"
-      ],
-      "@radvil/web/layout/main-view": ["libs/web/layout/main-view/src/index.ts"]
+      "@radvil/web/pages": ["libs/web/pages/src/index.ts"],
+      "@radvil/web/shell": ["libs/web/shell/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

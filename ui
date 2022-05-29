@@ -1,0 +1,15 @@
+yarn run v1.22.18
+$ /home/radvil/Projects/fullstack-live-chat/node_modules/.bin/nx generate @nrwl/angular:library pages --directory=web --prefix=web --simpleModuleName --standaloneConfig --tags=scope:web,type: --no-interactive --dry-run
+UPDATE workspace.json
+CREATE libs/web/pages/README.md
+CREATE libs/web/pages/tsconfig.lib.json
+CREATE libs/web/pages/tsconfig.spec.json
+CREATE libs/web/pages/src/index.ts
+CREATE libs/web/pages/tsconfig.json
+CREATE libs/web/pages/src/lib/pages.module.ts
+UPDATE tsconfig.base.json
+CREATE libs/web/pages/jest.config.ts
+CREATE libs/web/pages/src/test-setup.ts
+CREATE libs/web/pages/.eslintrc.json
+CREATE libs/web/pages/project.json
+Done in 1.58s.

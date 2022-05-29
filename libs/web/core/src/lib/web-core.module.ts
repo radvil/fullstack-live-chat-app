@@ -5,12 +5,12 @@ import { RouterModule } from '@angular/router';
 import { EffectsModule } from '@ngrx/effects';
 import { StoreModule } from '@ngrx/store';
 import { StoreRouterConnectingModule } from '@ngrx/router-store';
-import { LayoutContainerModule } from '@radvil/web/layout/container';
-import { webCoreRoutes } from './web.routes';
+import { webCoreRoutes } from './web-core.routes';
 
 import id from '@angular/common/locales/id';
 import { registerLocaleData } from '@angular/common';
 import { EXTERNAL_MODULES } from './build-specifics';
+import { WebShellModule } from '@radvil/web/shell';
 
 registerLocaleData(id);
 
@@ -24,7 +24,7 @@ const rootReducers = {};
     EffectsModule.forRoot([]),
     StoreModule.forRoot(rootReducers, { metaReducers: [] }),
     StoreRouterConnectingModule.forRoot(),
-    LayoutContainerModule,
+    WebShellModule.forRoot(),
     ...EXTERNAL_MODULES,
   ],
   exports: [BrowserAnimationsModule, HttpClientModule, RouterModule],

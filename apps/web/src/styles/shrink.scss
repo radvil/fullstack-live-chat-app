@@ -1,0 +1,42 @@
+.web-shell-wrapper .shrink-layout {
+  .sidebar,
+  .content {
+    flex: unset !important;
+  }
+
+  .sidebar {
+    width: 6rem;
+    display: flex;
+  }
+
+  .app-name-label {
+    display: none;
+  }
+
+  .user-menu {
+    .meta {
+      display: none !important;
+    }
+  }
+
+  .menu-list-item-header {
+    justify-content: center;
+  }
+
+  .menu-list-item {
+    justify-content: center;
+
+    mat-icon {
+      display: inline;
+      margin-right: 0;
+    }
+
+    .menu-label {
+      display: none;
+    }
+
+    button {
+      justify-content: center;
+    }
+  }
+}

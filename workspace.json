@@ -14,7 +14,7 @@
     "web-config": "libs/web/config",
     "web-core": "libs/web/core",
     "web-e2e": "apps/web-e2e",
-    "web-layout-container": "libs/web/layout/container",
-    "web-layout-main-view": "libs/web/layout/main-view"
+    "web-pages": "libs/web/pages",
+    "web-shell": "libs/web/shell"
   }
 }

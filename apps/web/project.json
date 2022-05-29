@@ -14,7 +14,10 @@
         "tsConfig": "apps/web/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
         "assets": ["apps/web/src/favicon.ico", "apps/web/src/assets"],
-        "styles": ["apps/web/src/styles.scss"],
+        "styles": [
+          "apps/web/src/styles/main.scss",
+          "apps/web/src/styles/shrink.scss"
+        ],
         "scripts": []
       },
       "configurations": {
