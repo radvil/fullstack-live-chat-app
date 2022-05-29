@@ -21,21 +21,7 @@
       "@radvil/shared/data-access": ["libs/shared/data-access/src/index.ts"],
       "@radvil/shared/utils": ["libs/shared/utils/src/index.ts"],
       "@radvil/web/auth": ["libs/web/auth/src/index.ts"],
-      "@radvil/web/chat-room/feature/chat-form-input": [
-        "libs/web/chat-room/feature/chat-form-input/src/index.ts"
-      ],
-      "@radvil/web/chat-room/feature/chat-friend-list": [
-        "libs/web/chat-room/feature/chat-friend-list/src/index.ts"
-      ],
-      "@radvil/web/chat-room/feature/chat-message": [
-        "libs/web/chat-room/feature/chat-message/src/index.ts"
-      ],
-      "@radvil/web/chat-room/feature/chat-room-shell": [
-        "libs/web/chat-room/feature/chat-room-shell/src/index.ts"
-      ],
-      "@radvil/web/chat-room/feature/chat-scrolled-container": [
-        "libs/web/chat-room/feature/chat-scrolled-container/src/index.ts"
-      ],
+      "@radvil/web/chat-room": ["libs/web/chat-room/src/index.ts"],
       "@radvil/web/config": ["libs/web/config/src/index.ts"],
       "@radvil/web/core": ["libs/web/core/src/index.ts"],
       "@radvil/web/layout/container": [

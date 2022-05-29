@@ -1,7 +1,7 @@
 /* eslint-disable */
 export default {
-  displayName: 'web-chat-room-feature-chat-friend-list',
-  preset: '../../../../../jest.preset.js',
+  displayName: 'web-chat-room',
+  preset: '../../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
   globals: {
     'ts-jest': {
@@ -9,7 +9,7 @@ export default {
       stringifyContentPathRegex: '\\.(html|svg)$',
     },
   },
-  coverageDirectory: '../../../../../coverage/libs/web/chat-room/feature/chat-friend-list',
+  coverageDirectory: '../../../coverage/libs/web/chat-room',
   transform: {
     '^.+\\.(ts|mjs|js|html)$': 'jest-preset-angular',
   },

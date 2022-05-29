@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Route, RouterModule } from '@angular/router';
-import { ChatRoomShellComponent, ChatRoomShellModule } from '@radvil/web/chat-room/feature/chat-room-shell';
 import { MainViewComponent } from './main-view.component';
 import { MainViewModule } from './main-view.module';
+import { ChatRoomComponent, ChatRoomModule } from "@radvil/web/chat-room";
 
 export const mainViewRoutes: Route[] = [
   {
@@ -11,7 +11,7 @@ export const mainViewRoutes: Route[] = [
     children: [
       {
         path: 'chat-room',
-        component: ChatRoomShellComponent,
+        component: ChatRoomComponent,
         data: { title: 'Chat Room' },
       },
       {
@@ -24,6 +24,6 @@ export const mainViewRoutes: Route[] = [
 ];
 
 @NgModule({
-  imports: [MainViewModule, ChatRoomShellModule, RouterModule.forChild(mainViewRoutes)],
+  imports: [MainViewModule, ChatRoomModule, RouterModule.forChild(mainViewRoutes)],
 })
 export class MainViewRoutingModule {}
