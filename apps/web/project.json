@@ -84,5 +84,5 @@
       }
     }
   },
-  "tags": ["type:app"]
+  "tags": ["scope:web", "type:web-app", "framework:angular"]
 }

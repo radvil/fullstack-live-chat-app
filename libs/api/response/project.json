@@ -19,5 +19,5 @@
       }
     }
   },
-  "tags": ["feature"]
+  "tags": ["scope:api", "type:api-feature", "framework:nestjs"]
 }

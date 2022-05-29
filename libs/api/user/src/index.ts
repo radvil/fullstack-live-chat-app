@@ -1,4 +1,3 @@
-export * from './lib/model/';
 export * from './lib/controller';
 export * from './lib/service';
 

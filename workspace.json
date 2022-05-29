@@ -6,8 +6,7 @@
     "api-auth": "libs/api/auth",
     "api-response": "libs/api/response",
     "api-user": "libs/api/user",
-    "shared": "libs/shared",
-    "test": "libs/test",
+    "shared-data-access": "libs/shared/data-access",
     "web": "apps/web",
     "web-e2e": "apps/web-e2e"
   }

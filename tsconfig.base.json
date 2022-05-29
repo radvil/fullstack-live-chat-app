@@ -18,8 +18,7 @@
       "@radvil/api/auth": ["libs/api/auth/src/index.ts"],
       "@radvil/api/response": ["libs/api/response/src/index.ts"],
       "@radvil/api/user": ["libs/api/user/src/index.ts"],
-      "@radvil/shared": ["libs/shared/src/index.ts"],
-      "@radvil/test": ["libs/test/src/index.ts"]
+      "@radvil/shared/data-access": ["libs/shared/data-access/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

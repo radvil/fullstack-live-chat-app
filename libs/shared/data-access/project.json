@@ -1,6 +1,6 @@
 {
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "libs/api/auth/src",
+  "sourceRoot": "libs/shared/data-access/src",
   "projectType": "library",
   "targets": {
     "lint": {
@@ -10,20 +10,23 @@
       ],
       "options": {
         "lintFilePatterns": [
-          "libs/api/auth/**/*.ts"
+          "libs/shared/data-access/**/*.ts"
         ]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
       "outputs": [
-        "coverage/libs/api/auth"
+        "coverage/libs/shared/data-access"
       ],
       "options": {
-        "jestConfig": "libs/api/auth/jest.config.ts",
+        "jestConfig": "libs/shared/data-access/jest.config.ts",
         "passWithNoTests": true
       }
     }
   },
-  "tags": ["scope:api", "type:api-feature", "framework:nestjs"]
+  "tags": [
+    "scope:shared",
+    "type:data-access"
+  ]
 }

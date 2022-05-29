@@ -1,17 +1,12 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { ApiAuthModule } from '@radvil/api/auth';
 import { ApiResponseModule } from '@radvil/api/response';
 import { ApiUserModule } from '@radvil/api/user';
 
 import { envFilePath, getDatabaseConfigModuleFactory, globalConfigValidationSchema } from './app.config';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
 
 @Module({
-  controllers: [AppController],
-  providers: [AppService],
   imports: [
     ConfigModule.forRoot({
       isGlobal: true,
@@ -25,8 +20,7 @@ import { AppService } from './app.service';
     }),
 
     ApiResponseModule,
-    ApiAuthModule,
     ApiUserModule,
   ],
 })
-export class AppModule {}
+export class ApiAppModule {}

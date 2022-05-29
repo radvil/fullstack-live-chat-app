@@ -23,6 +23,6 @@
       }
     }
   },
-  "tags": [],
+  "tags": ["scope:web", "type:web-e2e", "framework:angular"],
   "implicitDependencies": ["web"]
 }

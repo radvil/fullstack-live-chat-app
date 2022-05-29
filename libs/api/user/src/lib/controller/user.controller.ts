@@ -1,21 +1,32 @@
-import { Controller, Get, Param, Query } from '@nestjs/common';
-import { ApiDataUser } from '@radvil/shared';
+import { Body, Controller, Get, Param, Post, Query } from '@nestjs/common';
+import { ApiResMessage } from '@radvil/api/response';
+import { DtoAuthenticateUser, DtoCreateUser, UserEntity } from '@radvil/shared/data-access';
 import { UserService } from '../service';
 
-const featureName = 'users';
-
-@Controller(featureName)
+@Controller('users')
 export class UserController {
   constructor(private userService: UserService) {}
 
-  @Get()
+  @Get('')
   findAll(@Query('limit') limit = 10, @Query('page') page = 0) {
     limit = limit > 100 ? 100 : limit;
-    return this.userService.getMany({ limit, page, route: `/${featureName}` });
+    return this.userService.getMany({ limit, page, route: '/users' });
   }
 
-  @Get(ApiDataUser.ApiParams.UserId)
+  @Get(':userId')
   findById(@Param() userId: string) {
     return this.userService.findOne({ where: { id: userId } });
+  }
+
+  @Post('login')
+  @ApiResMessage('User logged in successfully')
+  login(@Body() dto: DtoAuthenticateUser) {
+    return this.userService.authenticate(dto);
+  }
+
+  @Post('registration')
+  @ApiResMessage('User created successfully')
+  async register(@Body() payload: DtoCreateUser): Promise<UserEntity> {
+    return await this.userService.createOne(payload);
   }
 }
