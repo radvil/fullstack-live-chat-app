@@ -1,5 +1,4 @@
 import { Routes } from '@angular/router';
-import { PagesComponent } from '@radvil/web/pages';
 
 export const webCoreRoutes: Routes = [
   {
@@ -8,7 +7,6 @@ export const webCoreRoutes: Routes = [
   },
   {
     path: '',
-    component: PagesComponent,
-    children: [],
+    loadChildren: async () => (await import('@radvil/web/pages')).PagesModule,
   },
 ];
