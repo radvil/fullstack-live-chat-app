@@ -5,7 +5,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   styleUrls: ['wrapper.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
-    <div class="web-shell-wrapper rad-dark-theme">
+    <div class="web-shell-wrapper rad-light-theme">
       <ng-content></ng-content>
     </div>
   `,

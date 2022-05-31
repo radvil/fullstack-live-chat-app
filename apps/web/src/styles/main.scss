@@ -1,4 +1,33 @@
-@import 'theming';
+@use '@angular/material' as mat;
+
+@import '_reset';
+
+@include mat.core();
+
+@import './themes/light.theme.scss';
+@import './themes/dark.theme.scss';
+
+@import "./themes/reset.theme";
+
+@mixin rad-components-theme($theme) {
+  @include rad-reset-theme($theme);
+}
+
+.rad-light-theme {
+  @include mat.all-component-themes($rad-light-theme);
+  @include mat.strong-focus-indicators-theme($rad-light-theme);
+  @include rad-components-theme($rad-light-theme);
+}
+
+.rad-dark-theme {
+  @include mat.all-component-themes($rad-dark-theme);
+  @include mat.strong-focus-indicators-theme($rad-dark-theme);
+  @include rad-components-theme($rad-dark-theme);
+}
+
+
+// end of material theming
+
 @import 'notification';
 
 * {
